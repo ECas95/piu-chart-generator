@@ -9,7 +9,7 @@ from collections import Counter
 from collections import defaultdict
 from hybrid import sources
 
-AUTHORITY='Sí, simplificar sólo las variantes nuevas fáciles'
+AUTHORITY='Yes, simplify only the new easy variants'
 
 def density_hold_keys(source, *, band, target_density):
     """Keep rhythmically salient complete holds within each EASY phrase budget.

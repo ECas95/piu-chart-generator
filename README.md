@@ -1,66 +1,69 @@
-# Generador de charts PIU a partir de otros charts (autónomo)
+# PIU chart generator — step charts from other charts (standalone)
 
-Toma **un** chart fuente y genera **4 niveles de Single y 4 de Double** (T0 más fácil … T3 = ritmo original completo), en `.NX` (formato PRIME) y en un `song.ssc` de StepMania 5.
+Takes **one** source chart and generates **4 Single and 4 Double levels** (T0 easiest … T3 = full original rhythm) as `.NX` (PRIME format) and as a StepMania 5 `song.ssc`.
 
-Es el algoritmo final del proyecto: **v364 "faithful" + variante F** (patrones validados por el usuario, giros T1-T5, generador ArrowVortex, paridad estricta de pies, gate anti-giro, PumpDoublify para los Double, nivel = estimación del modelo nativo).
+This is the project's final algorithm: **v364 "faithful" + variant F** (hand-validated patterns, T1–T5 twists, ArrowVortex stream generator, strict foot parity, anti-spin gate, PumpDoublify for Doubles, level = estimate of a native difficulty model).
 
-## Uso
+## Usage
 
-Requisitos: Python 3.11+ y `numpy`. Nada más; no usa rutas externas ni el resto del proyecto.
+Requirements: Python 3.11+ and `numpy`. Nothing else; it uses no external paths and none of the rest of the project.
 
 ```powershell
-python piugen.py "C:\Charts\cancion.sm"  --out "C:\Charts\salida" --title "Mi cancion" --artist "Yo"
-python piugen.py cancion.ssc | cancion.bme | cancion.NX  --out salida
+python piugen.py "C:\Charts\song.sm"  --out "C:\Charts\out" --title "My song" --artist "Me"
+python piugen.py song.ssc | song.bme | song.NX  --out out
 ```
 
-Opciones: `--id` (carpeta de salida), `--music` (audio para `#MUSIC`), `--djmax` (fuente de teclado: acordes de stream pasan a nota simple), `--lead-in-ms N` (descarta notas antes de N ms y arranca en el primer beat fuerte), `--variant A..F` (por defecto F), `--no-ssc`.
+Options: `--id` (output folder), `--music` (audio for `#MUSIC`), `--djmax` (keyboard source: stream chords collapse to single notes), `--lead-in-ms N` (drop notes before N ms and start on the first strong beat), `--variant A..F` (default F), `--no-ssc`.
 
-**Con un SSC de entrada, el `song.ssc` final = su cabecera original + sus charts originales intactos (con sus SPEEDS/SCROLLS) + 8 generados** (4 Single y 4 Double) a partir del chart Single de mayor nivel. Los generados salen como dificultad `Edit` (nombre `S<nivel>_T<k>` / `D<nivel>_T<k>`) para no pisar las casillas de los originales, y cada uno lleva su propio timing. Con `.sm` de entrada solo se conserva la cabecera (sus charts no se copian). `--title/--artist/--music` sobrescriben solo si se pasan; `--no-keep-metadata` da cabecera genérica sin originales. Si la entrada es una carpeta, usa su `.ssc`/`.sm` e ignora salidas previas de piugen.
+**With an SSC input, the final `song.ssc` = its original header + its original charts untouched (with their SPEEDS/SCROLLS) + 8 generated charts** (4 Single and 4 Double) built from the highest-level Single chart. Generated charts are written as `Edit` difficulty (named `S<level>_T<k>` / `D<level>_T<k>`) so they never overwrite the original slots, and each carries its own timing. With a `.sm` input only the header is kept (its charts are not copied). `--title/--artist/--music` override only when given; `--no-keep-metadata` writes a generic header without the originals. If the input is a folder, its `.ssc`/`.sm` is used and previous piugen outputs are ignored.
 
-**Fuente y tope de dificultad.** Se usa el Single de mayor nivel del simfile; solo si no hay ningún Single, el Double de mayor nivel (aunque el Double sea más difícil, gana el Single). Ningún chart generado sale más difícil que ese original: el tier T3 (ritmo original completo) se etiqueta con el nivel del original y los demás quedan proporcionales por debajo; las notas son siempre un subconjunto del original (nunca se añaden). Con BMS/NX, que no traen nivel, el tope es la estimación del modelo para el Single completo. El nivel crudo del modelo queda en cada recibo `.json` (`model_level`, `level_cap`).
+**Source and difficulty ceiling.** The simfile's highest-level Single is used; only if there is no Single is the highest-level Double used (even if the Double is harder, the Single wins). No generated chart is harder than that original: tier T3 (full original rhythm) is labelled with the original's level and the others are proportionally lower; notes are always a subset of the original (never added). With BMS/NX, which carry no level, the ceiling is the model's estimate for the full Single. The raw model level is stored in every receipt `.json` (`model_level`, `level_cap`).
 
-Entradas: SM/SSC (dance-/pump-single o -double), BMS/BME de 5 teclas con BPM constante, o NX de PRIME (Single o Double). Un simfile con `SPEEDS`/`SCROLLS` variables se acepta con aviso (los generados salen a velocidad constante); un BMS con cambios de BPM o stops se rechaza.
+Inputs: SM/SSC (dance-/pump-single or -double), 5-key BMS/BME with constant BPM, or PRIME NX (Single or Double). A simfile with variable `SPEEDS`/`SCROLLS` is accepted with a warning (generated charts use constant speed); a BMS with BPM changes or stops is rejected.
 
-Salida en `SALIDA/<id>/`: `Single_T0..T3.NX`, `Double_T0..T3.NX`, un `.json` por chart (recibo, gate, notas omitidas/convertidas) y `song.ssc`. El audio no se genera ni se copia.
+Output in `OUT/<id>/`: `Single_T0..T3.NX`, `Double_T0..T3.NX`, one `.json` receipt per chart (gate result, omitted/converted notes) and `song.ssc`. Audio is neither generated nor copied.
 
-## Cómo funciona (resumen)
+## How it works (summary)
 
-1. Fuente → NX interno conservando el reloj exacto (`lib/nx_adapter.py`, `lib/hybrid/bms_adapter.py`).
-2. Se conserva el ritmo original: **no se añaden ni mueven notas**. Los niveles bajos son subconjuntos del original por fuerza métrica (`faithful.reductions`).
-3. `hybrid/composer.py` asigna paneles por beam search con paridad estricta de pies; `hybrid/musical.py` aplica los patrones de usuario, giros y motivos oficiales; `hybrid/vortex.py` es el port del generador de ArrowVortex.
-4. `playability.py` (Viterbi del pie natural) rechaza posturas hacia atrás; los puntos conflictivos se omiten/convierten con registro y se recompone.
-5. Double = PumpDoublify del Single (`pumpdoublify_adapter.py`, `lib/pumpdoublify/`) + gate; si falla, se compone el mismo ritmo en 10 paneles.
-6. El nivel de cada chart es la estimación del modelo de dificultad nativo (`engine/difficulty_model.py` + `data/official_chart_metrics.json`, 21 vecinos oficiales).
+1. Source → internal NX keeping the exact clock (`lib/nx_adapter.py`, `lib/hybrid/bms_adapter.py`).
+2. The original rhythm is preserved: **notes are never added or moved**. Lower levels are subsets of the original by metric strength (`faithful.reductions`).
+3. `hybrid/composer.py` assigns panels with a beam search under strict foot parity; `hybrid/musical.py` applies the validated patterns, twists and official motifs; `hybrid/vortex.py` is a port of the ArrowVortex generator.
+4. `playability.py` (natural-foot Viterbi) rejects backwards stances; conflicting spots are omitted/converted with a log and the chart is recomposed.
+5. Double = PumpDoublify of the Single (`pumpdoublify_adapter.py`, `lib/pumpdoublify/`) + gate; if it fails, the same rhythm is composed on 10 panels.
+6. Each chart's level is the native difficulty model's estimate (`engine/difficulty_model.py` + `data/official_chart_metrics.json`, 21 official neighbours).
 
-## Estructura
+## Layout
 
 ```
 piugen.py            CLI
-lib/faithful.py      orquestador por canción (reducciones, Single, Double, recibos)
-lib/hybrid/          composer, musical, vortex, sources, validation, bms_adapter, JSON de patrones/motivos
-lib/engine/          modelo de dificultad, nx20, quality_charting, travel
-lib/playability.py   gate anti-giro        lib/pumpdoublify*   Single -> Double
-lib/nx_ssc.py        NX -> .ssc            lib/simfile.py      lector SM/SSC
-lib/user_patterns/   herramientas para transcribir/validar patrones nuevos (opcional)
+lib/faithful.py      per-song orchestrator (reductions, Single, Double, receipts)
+lib/hybrid/          composer, musical, vortex, sources, validation, bms_adapter, pattern/motif JSON
+lib/engine/          difficulty model, nx20, quality_charting, travel
+lib/playability.py   anti-spin gate        lib/pumpdoublify*   Single -> Double
+lib/nx_ssc.py        NX -> .ssc            lib/simfile.py      SM/SSC reader
+lib/user_patterns/   tools to transcribe/validate new patterns (optional)
 data/                official_chart_metrics.json
+docs/                development history and research
 ```
 
-## Pruebas rápidas
+## Quick checks
 
 ```powershell
 python lib\faithful.py --selftest
 python lib\playability.py
 ```
 
-## Notas
+## Notes
 
-- Los charts generados son **sin revisión humana**: no se certifica jugabilidad.
-- `lib/user_patterns/*.py` son herramientas de desarrollo del proyecto original (algunas esperan datos que no se incluyen); el generador no las usa.
-- Para añadir un patrón nuevo, editar `lib/hybrid/user_patterns_single.json` (ver `lib/user_patterns/analyze.py`, `check_patterns.py`).
-- El volcado crudo anterior (`PIU_ALGORITMO_COMPLETO`) sigue ahí como referencia histórica; esta carpeta es la versión usable.
+- Generated charts have **no full human review**: playability is not certified.
+- `lib/user_patterns/*.py` are development tools from the original project (some expect data that is not included); the generator does not use them.
+- To add a pattern, edit `lib/hybrid/user_patterns_single.json` (see `lib/user_patterns/analyze.py`, `check_patterns.py`).
+- Some development tools in `lib/user_patterns/` and `lib/engine/ez2_convert.py` contain hard-coded drive paths from the author's machine; adjust them before use.
+- Sister project: the PIU omnimix mod ([piu-omnimix](https://github.com/ECas95/piu-omnimix)).
 
-## Documentación
-- `docs/DESARROLLO.md`: investigación y evolución v362 → variante F.
-- `docs/research/`: scripts y propuestas del estudio de charts oficiales.
-- Algunas herramientas de `lib/user_patterns/` y `lib/engine/ez2_convert.py` tienen rutas de unidad fijas del autor; ajústalas para usarlas.
-- Proyecto hermano: el mod PIU omnimix (repo `piu-omnimix`).
+## Documentation
+- `docs/DEVELOPMENT.md`: research and evolution, v362 → variant F.
+- `docs/research/`: scripts and proposals from the official-chart study.
+
+## License
+MIT.
