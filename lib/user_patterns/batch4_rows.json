@@ -1,0 +1,424 @@
+{
+ "patterns": [
+  {
+   "id": "W1",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "C"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C",
+     "UR"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UL",
+     "C"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C",
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W2",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "UR"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "UL",
+     "DR"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "UR"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "UL",
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W3",
+   "rows": [
+    [
+     "DL",
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "UL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W4",
+   "rows": [
+    [
+     "DL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W5",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W6",
+   "rows": [
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W7",
+   "rows": [
+    [
+     "DL",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W8",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~3"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W9",
+   "rows": [
+    [
+     "DL~6"
+    ],
+    [],
+    [
+     "DR"
+    ],
+    [],
+    [
+     "C"
+    ],
+    [],
+    [
+     "DR"
+    ],
+    [],
+    [
+     "DL",
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W10",
+   "rows": [
+    [
+     "UL~3"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W11",
+   "rows": [
+    [
+     "DL~1"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C~1"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~1"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  },
+  {
+   "id": "W12",
+   "rows": [
+    [
+     "C"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL~1"
+    ],
+    [
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)"
+  }
+ ]
+}

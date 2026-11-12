@@ -1,0 +1,81 @@
+{
+  "method": "p90 of fixed-lane native alternating-foot minimax route speeds, deterministic deduplicated song sample, same reach offset .75, stance and facing limits. No generated DJMAX chart used for calibration. Fewer than20 compatible phrases retain previous bound.",
+  "bands": {
+    "5_11": {
+      "charts_sampled": 90,
+      "compatible_phrases": 175,
+      "speed_p50": 4.428090415820635,
+      "speed_p90": 7.91666666666732,
+      "speed_p95": 8.166666666666824,
+      "speed_p99": 8.333333333333334,
+      "maximum": 8.333333333333334
+    },
+    "5_16": {
+      "charts_sampled": 90,
+      "compatible_phrases": 1351,
+      "speed_p50": 6.666666666666667,
+      "speed_p90": 8.125000000000075,
+      "speed_p95": 8.750000000000318,
+      "speed_p99": 9.259166717530798,
+      "maximum": 10.166666666668048
+    },
+    "5_21": {
+      "charts_sampled": 90,
+      "compatible_phrases": 2639,
+      "speed_p50": 7.916666666666589,
+      "speed_p90": 9.166666666666934,
+      "speed_p95": 10.0,
+      "speed_p99": 10.250000000001371,
+      "maximum": 13.000000000000304
+    },
+    "5_26": {
+      "charts_sampled": 3,
+      "compatible_phrases": 59,
+      "speed_p50": 10.0,
+      "speed_p90": 10.0,
+      "speed_p95": 12.222222222221275,
+      "speed_p99": 12.222222222221275,
+      "maximum": 13.7500000000004
+    },
+    "10_11": {
+      "charts_sampled": 90,
+      "compatible_phrases": 5,
+      "speed_p50": 4.249999999999975,
+      "speed_p90": 6.374999999999647,
+      "speed_p95": 6.374999999999647,
+      "speed_p99": 6.374999999999647,
+      "maximum": 6.374999999999647
+    },
+    "10_16": {
+      "charts_sampled": 90,
+      "compatible_phrases": 176,
+      "speed_p50": 6.333333333333505,
+      "speed_p90": 7.625000000000133,
+      "speed_p95": 7.916666666666589,
+      "speed_p99": 8.333333333333334,
+      "maximum": 8.333333333333334
+    },
+    "10_21": {
+      "charts_sampled": 90,
+      "compatible_phrases": 348,
+      "speed_p50": 7.083333333333643,
+      "speed_p90": 8.333333333333334,
+      "speed_p95": 8.750000000000318,
+      "speed_p99": 9.687500000000071,
+      "maximum": 9.9071198499986
+    },
+    "10_26": {
+      "charts_sampled": 48,
+      "compatible_phrases": 447,
+      "speed_p50": 8.750000000000764,
+      "speed_p90": 10.0,
+      "speed_p95": 10.0,
+      "speed_p99": 11.007800925801709,
+      "maximum": 19.333333333336487
+    }
+  },
+  "source_reports_sha256": {
+    "5": "141e3db4ec9c04ee3ae3fb80da9c2e976b843d9d5cfbff25ab3784203c552926",
+    "10": "3e1d37c1d7536905eaee43c1cd80f9d4b539149cf08d6f6f53fae1a10de6dcaa"
+  }
+}

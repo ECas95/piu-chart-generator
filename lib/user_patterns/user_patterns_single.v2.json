@@ -1,0 +1,993 @@
+{
+ "note": "Patrones validados por el usuario en pad (no dejan al jugador de espaldas), validos con cualquier ritmo. Single, paneles DL UL C UR DR. Se encadenan: el siguiente patron empieza en el panel donde termino el anterior. Patrones por filas (\"rows\"): cada fila es una corchea, \"A B\" = salto, \"A~n\" = hold de n filas, [] = silencio; se aplican solo donde el original tiene la misma estructura (notas por fila, holds, ritmo relativo) a corcheas o mas lento; min_level segun la revision (6 = frontal, 13 = con giro/cruce).",
+ "patterns": [
+  {
+   "id": "U1",
+   "panels": [
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "C",
+    "UR",
+    "UL",
+    "UR",
+    "C",
+    "DR",
+    "DL"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "U2",
+   "panels": [
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "C",
+    "UR",
+    "UL",
+    "UR",
+    "C",
+    "DR",
+    "DL",
+    "C",
+    "UL"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "U3",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "UR",
+    "DR",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "DL",
+    "C",
+    "UL"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 4,
+   "crossovers": 2,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "U4",
+   "panels": [
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "DR",
+    "DL",
+    "C",
+    "DR",
+    "UR",
+    "C",
+    "DR",
+    "UR",
+    "C",
+    "UL",
+    "UR",
+    "C",
+    "DR"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 6,
+   "crossovers": 3,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "U5",
+   "panels": [
+    "C",
+    "UL",
+    "UR",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "UL",
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "C",
+    "DR",
+    "DL",
+    "C"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 2,
+   "crossovers": 0,
+   "max_yaw": 90.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "U6",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UR",
+    "DR",
+    "UR",
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "C"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 6,
+   "crossovers": 2,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "U7",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UR",
+    "DR",
+    "UR",
+    "C",
+    "UL",
+    "DL",
+    "UL",
+    "C",
+    "UR",
+    "DR",
+    "UR",
+    "C",
+    "UL",
+    "DL"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 12,
+   "crossovers": 4,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "U8",
+   "panels": [
+    "DL",
+    "UR",
+    "C",
+    "UL",
+    "DR",
+    "UL",
+    "C",
+    "UR",
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "C"
+   ],
+   "rhythm": "16 semicorcheas seguidas + llegada al siguiente compas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80",
+   "steps": 17,
+   "turns": 4,
+   "crossovers": 4,
+   "max_yaw": 135.0,
+   "max_cross_run": 4
+  },
+  {
+   "id": "T1",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UR",
+    "UL"
+   ],
+   "rhythm": "corcheas (valido con cualquier ritmo)",
+   "kind": "twist permitido: no deja de espaldas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79",
+   "steps": 5,
+   "turns": 2,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "T2",
+   "panels": [
+    "UL",
+    "DL",
+    "C",
+    "DR",
+    "UL"
+   ],
+   "rhythm": "corcheas (valido con cualquier ritmo)",
+   "kind": "twist permitido: no deja de espaldas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79",
+   "steps": 5,
+   "turns": 2,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "T3",
+   "panels": [
+    "C",
+    "UL",
+    "DL",
+    "UL",
+    "C"
+   ],
+   "rhythm": "corcheas (valido con cualquier ritmo)",
+   "kind": "twist permitido: no deja de espaldas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79",
+   "steps": 5,
+   "turns": 2,
+   "crossovers": 0,
+   "max_yaw": 90.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "T4",
+   "panels": [
+    "C",
+    "DL",
+    "UL",
+    "DL",
+    "C"
+   ],
+   "rhythm": "corcheas (valido con cualquier ritmo)",
+   "kind": "twist permitido: no deja de espaldas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79",
+   "steps": 5,
+   "turns": 2,
+   "crossovers": 0,
+   "max_yaw": 90.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "T5",
+   "panels": [
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "DR"
+   ],
+   "rhythm": "corcheas (valido con cualquier ritmo)",
+   "kind": "twist permitido: no deja de espaldas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79",
+   "steps": 5,
+   "turns": 2,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "V1",
+   "panels": [
+    "UL",
+    "C",
+    "DL",
+    "C",
+    "UL",
+    "UR",
+    "C",
+    "DR",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "DL",
+    "DR",
+    "C",
+    "UR",
+    "UL"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "V2",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "DL",
+    "UL",
+    "C",
+    "DL",
+    "UL",
+    "C",
+    "UL",
+    "DL"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 10,
+   "crossovers": 4,
+   "max_yaw": 135.0,
+   "max_cross_run": 2
+  },
+  {
+   "id": "V3",
+   "panels": [
+    "DL",
+    "C",
+    "UL",
+    "DL",
+    "UL",
+    "C",
+    "DL",
+    "UL",
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "UL",
+    "DL",
+    "C",
+    "DR",
+    "DL"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 8,
+   "crossovers": 3,
+   "max_yaw": 135.0,
+   "max_cross_run": 2
+  },
+  {
+   "id": "V4",
+   "panels": [
+    "C",
+    "DL",
+    "UL",
+    "DL",
+    "C",
+    "DL",
+    "UL",
+    "DL",
+    "C",
+    "UL",
+    "DL",
+    "UL",
+    "C",
+    "DL",
+    "UL",
+    "C",
+    "UR"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 8,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "V5",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UL",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "UR",
+    "C",
+    "UR",
+    "DR",
+    "C",
+    "UR",
+    "UL",
+    "C",
+    "DL"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 8,
+   "crossovers": 6,
+   "max_yaw": 135.0,
+   "max_cross_run": 3
+  },
+  {
+   "id": "V6",
+   "panels": [
+    "DL",
+    "UL",
+    "C",
+    "UL",
+    "C",
+    "UR",
+    "C",
+    "UR",
+    "DR",
+    "UR",
+    "C",
+    "UR",
+    "C",
+    "UL",
+    "C",
+    "UL",
+    "DL"
+   ],
+   "rhythm": "semicorcheas (valido con cualquier ritmo)",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 3)",
+   "steps": 17,
+   "turns": 10,
+   "crossovers": 6,
+   "max_yaw": 135.0,
+   "max_cross_run": 3
+  },
+  {
+   "id": "W1",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "C"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C",
+     "UR"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UL",
+     "C"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C",
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W2",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "UR"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "UL",
+     "DR"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DL",
+     "UR"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "UL",
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W3",
+   "rows": [
+    [
+     "DL",
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "UL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 13,
+   "steps": 9,
+   "turns": 5,
+   "crossovers": 0,
+   "max_yaw": 90.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W4",
+   "rows": [
+    [
+     "DL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 13,
+   "steps": 9,
+   "turns": 4,
+   "crossovers": 4,
+   "max_yaw": 135.0,
+   "max_cross_run": 2
+  },
+  {
+   "id": "W5",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W6",
+   "rows": [
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W7",
+   "rows": [
+    [
+     "DL",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "DR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL",
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W8",
+   "rows": [
+    [
+     "DL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~3"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 13,
+   "steps": 9,
+   "turns": 2,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "W9",
+   "rows": [
+    [
+     "DL~6"
+    ],
+    [],
+    [
+     "DR"
+    ],
+    [],
+    [
+     "C"
+    ],
+    [],
+    [
+     "DR"
+    ],
+    [],
+    [
+     "DL",
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 5,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  },
+  {
+   "id": "W10",
+   "rows": [
+    [
+     "UL~3"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UL",
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "C"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 13,
+   "steps": 9,
+   "turns": 2,
+   "crossovers": 1,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "W11",
+   "rows": [
+    [
+     "DL~1"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C~1"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UL~1"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR~1"
+    ],
+    [
+     "DR"
+    ],
+    [
+     "DL"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 13,
+   "steps": 9,
+   "turns": 4,
+   "crossovers": 2,
+   "max_yaw": 135.0,
+   "max_cross_run": 1
+  },
+  {
+   "id": "W12",
+   "rows": [
+    [
+     "C"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "C"
+    ],
+    [
+     "UR"
+    ],
+    [
+     "UL"
+    ],
+    [
+     "C"
+    ],
+    [
+     "DL~1"
+    ],
+    [
+     "DR"
+    ]
+   ],
+   "rhythm": "corcheas; filas = corcheas, ~n = hold de n filas",
+   "source": "usuario 2026-10-31, capturas StepP1 compas 79-80 (tanda 4)",
+   "min_level": 6,
+   "steps": 9,
+   "turns": 0,
+   "crossovers": 0,
+   "max_yaw": 45.0,
+   "max_cross_run": 0
+  }
+ ]
+}
